@@ -1,7 +1,8 @@
 package tarlan.printer.com.helper;
 
 /**
- * The TreeNode class is a basic building block used to represent nodes in a binary tree. Each TreeNode object contains three main components
+ * The TreeNode class is a basic building block used to represent nodes in a binary tree.
+ * Each TreeNode object contains three main components
  */
 public class TreeNode {
     // An integer value representing the data stored in the node.
@@ -14,5 +15,14 @@ public class TreeNode {
     TreeNode right;
 
     // A constructor that initializes the node with a given integer value x. The left and right child references are initialized to null by default.
-    TreeNode(int x) { val = x; }
+    TreeNode(int x) {
+        this.val = x;
+    }
+
+    // A constructor that initializes the node with a given integer value x, left and right child references.
+    TreeNode(int x, TreeNode left, TreeNode right) {
+        this.val = x;
+        this.left = left;
+        this.right = right;
+    }
 }
