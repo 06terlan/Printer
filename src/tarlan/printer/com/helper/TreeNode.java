@@ -6,21 +6,21 @@ package tarlan.printer.com.helper;
  */
 public class TreeNode {
     // An integer value representing the data stored in the node.
-    int val;
+    public int val;
 
     // A reference to the left child of the current node. If the left child does not exist, this will be null. 
-    TreeNode left;
+    public TreeNode left;
 
     // A reference to the right child of the current node. If the right child does not exist, this will be null.
-    TreeNode right;
+    public TreeNode right;
 
     // A constructor that initializes the node with a given integer value x. The left and right child references are initialized to null by default.
-    TreeNode(int x) {
+    public TreeNode(final int x) {
         this.val = x;
     }
 
     // A constructor that initializes the node with a given integer value x, left and right child references.
-    TreeNode(int x, TreeNode left, TreeNode right) {
+    public TreeNode(final int x, final TreeNode left, final TreeNode right) {
         this.val = x;
         this.left = left;
         this.right = right;
