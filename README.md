@@ -13,7 +13,14 @@ Welcome to the Java Printer Library! This library provides a simple and flexible
 
 ## Features
 
-- **Print Any Data Type**: Support for printing primitives, arrays, collections, and custom objects.
+- **Print TreeNode**: Support for printing TreeNode in a vertical format.
+```c
+         1
+   ┌─────┴─────┐
+   2           2
+┌──┘
+3
+```
 - **Helper Classes**: Includes utility classes like `TreeNode` for working with binary trees.
 
 ## Examples
@@ -27,6 +34,10 @@ root.left = new TreeNode(5);
 root.right = new TreeNode(15);
 ```
 
+You can also define it like that.
+```java
+TreeNode root = new TreeNode(10, new TreeNode(5), new TreeNode(15));
+```
 ## Installation
 
 To use this library in your project, you can either clone the repository or include it as a dependency in your build tool.
