@@ -1,6 +1,8 @@
-package tarlan.printer.com.printers;
+package tarlan.printer.com.printers.tree;
 
 import tarlan.printer.com.helper.TreeNode;
+import tarlan.printer.com.printers.PrinterType;
+
 import java.util.*;
 
 /*
