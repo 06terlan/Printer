@@ -6,7 +6,8 @@ Welcome to the Java Printer Library! This library provides a simple and flexible
 
 - [Features](#features)
 - [Examples](#examples)
-  - [TreeNode Class](#treenode-class)
+  - [TreeNode Class](#treenode-class-example)
+  - [PrefixTreeNode Class](#prefixtreenode-class-example)
 - [Installation](#installation)
 - [Supported JDK versions](#supported-jdk-versions)
 - [Contributing](#contributing)
@@ -21,7 +22,7 @@ Welcome to the Java Printer Library! This library provides a simple and flexible
 ┌──┘
 3
 ```
-- **Helper Classes**: Includes utility classes like `TreeNode` for working with binary trees. See the example of TreeNode [here](#TreeNode-Class-Example)
+- **Helper Classes**: Includes utility classes like `TreeNode` and `PrefixTreeNode` for working with binary and prefix trees. See the example of TreeNode [here](#treenode-class-example) and PrefixTreeNode [here](#prefixtreenode-class-example)
 
 ## Examples
 ### Print TreeNode Example
@@ -54,6 +55,26 @@ You can also define it like that.
 ```java
 TreeNode root = new TreeNode(10, new TreeNode(5), new TreeNode(15));
 ```
+
+### PrefixTreeNode Class Example
+The PrefixTreeNode class represents a node in a prefix tree, also known as a Trie. This data structure is particularly useful for efficient retrieval of strings based on their prefixes, making it ideal for applications such as autocomplete, spell checking, and IP routing.
+
+```java
+// Create the root node of the Trie
+PrefixTreeNode rootNode = new PrefixTreeNode(null);
+
+// Add a word to the Trie
+String word = "apple";
+PrefixTreeNode currentNode = rootNode;
+
+for (char ch : word.toCharArray()) {
+    currentNode.children.putIfAbsent(ch, new PrefixTreeNode(ch));
+    currentNode = currentNode.children.get(ch);
+}
+
+// The word "apple" is now added to the Trie
+```
+
 ## Installation
 
 To use this library in your project, you can either clone the repository or include it as a dependency in your build tool.
