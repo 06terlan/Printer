@@ -1,6 +1,7 @@
 package tarlan.printer.com;
 
 import tarlan.printer.com.helper.TreeNode;
+import tarlan.printer.com.printers.ArrayPrinter;
 import tarlan.printer.com.printers.PrimitiveTypePrinter;
 import tarlan.printer.com.printers.tree.TreeNodeVerticalPrinter;
 
@@ -36,5 +37,14 @@ public class Printer {
      */
     public static void prettyPrint(final Integer value) {
         new PrimitiveTypePrinter(value).print();
+    }
+
+    /**
+     * Prints the given array of integers using the ArrayPrinter.
+     *
+     * @param values the array of integers to be printed.
+     */
+    public static void prettyPrint(final int[] values) {
+        new ArrayPrinter(values).print();
     }
 }

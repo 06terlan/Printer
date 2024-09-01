@@ -13,9 +13,12 @@ Welcome to the Java Printer Library! This library provides a simple and flexible
 - [Contributing](#contributing)
 
 ## Features
-
-- **Print TreeNode**: Support for printing TreeNode in a vertical format. See the example [here](#Print-TreeNode-Example)
-```c
+- **Print int/Integer**: Support for printing both `int` and `Integer` types. See the example [here](#Print-int-and-Integer-Example)
+```java
+(value: 1234)
+```
+- **Print TreeNode**: Support for printing `TreeNode` in a vertical format. See the example [here](#Print-TreeNode-Example)
+```java
          1
    ┌─────┴─────┐
    2           2
@@ -25,6 +28,20 @@ Welcome to the Java Printer Library! This library provides a simple and flexible
 - **Helper Classes**: Includes utility classes like `TreeNode` and `PrefixTreeNode` for working with binary and prefix trees. See the example of TreeNode [here](#treenode-class-example) and PrefixTreeNode [here](#prefixtreenode-class-example)
 
 ## Examples
+### Print int and Integer Example
+```java
+public static void main(String[] args) {
+    int intValue = 42;
+    
+    Printer.prettyPrint(intValue);
+    Printer.prettyPrint(Integer.valueOf(intValue));
+}
+```
+Output:
+```java
+(value: 42)
+(value: 42)
+```
 ### Print TreeNode Example
 ```java
 TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(3)), new TreeNode(2));

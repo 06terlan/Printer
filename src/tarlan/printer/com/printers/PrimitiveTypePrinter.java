@@ -24,6 +24,6 @@ public class PrimitiveTypePrinter implements PrinterType {
      */
     @Override
     public void print() {
-        System.out.println(value);
+        System.out.println(String.format(PRINT_FORMAT_STRING, value));
     }
 }
