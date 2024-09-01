@@ -21,11 +21,17 @@ public class PrefixTreeNode {
     public Map<Character, PrefixTreeNode> children;
 
     /**
+     * A counter that tracks how many words pass through or end at this node.
+     * This is useful for operations like word count or determining the frequency of a prefix.
+     */
+    public int wordCount = 0;
+
+    /**
      * Constructs a PrefixTreeNode with the specified character and an empty map of child nodes.
      *
      * @param prefix the character to be stored in this node.
      */
-    public PrefixTreeNode(Character prefix) {
+    public PrefixTreeNode(final Character prefix) {
         this.prefix = prefix;
         this.children = new HashMap<>();
     }
