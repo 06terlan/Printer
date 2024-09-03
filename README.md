@@ -13,10 +13,18 @@ Welcome to the Java Printer Library! This library provides a simple and flexible
 - [Contributing](#contributing)
 
 ## Features
+
 - **Print int/Integer**: Support for printing both `int` and `Integer` types. See the example [here](#Print-int-and-Integer-Example)
 ```java
 (value: 1234)
 ```
+
+- **Print int[]/int[][] array**: The ArrayPrinter class is designed to print arrays of integers in a formatted string. It supports both one-dimensional and two-dimensional arrays, making it versatile for various use cases. The output is formatted according to a specified format string defined in the PrinterType interface. See the example [here](#Print-int-Array-Example)
+```java
+(value: [1, 2, 3, 4, 5])
+(value: [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+```
+
 - **Print TreeNode**: Support for printing `TreeNode` in a vertical format. See the example [here](#Print-TreeNode-Example)
 ```java
          1
@@ -28,6 +36,24 @@ Welcome to the Java Printer Library! This library provides a simple and flexible
 - **Helper Classes**: Includes utility classes like `TreeNode` and `PrefixTreeNode` for working with binary and prefix trees. See the example of TreeNode [here](#treenode-class-example) and PrefixTreeNode [here](#prefixtreenode-class-example)
 
 ## Examples
+
+### Print int Array Example
+```java
+// Example for one-dimensional array
+int[] values = {1, 2, 3, 4, 5};
+ArrayPrinter printer1D = new ArrayPrinter(values);
+printer1D.print();  // Output: (value: [1, 2, 3, 4, 5])
+
+// Example for two-dimensional array
+int[][] values2D = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+ArrayPrinter printer2D = new ArrayPrinter(values2D);
+printer2D.print();  // Output: (value: [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+```
+
 ### Print int and Integer Example
 ```java
 public static void main(String[] args) {
@@ -42,6 +68,7 @@ Output:
 (value: 42)
 (value: 42)
 ```
+
 ### Print TreeNode Example
 ```java
 TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(3)), new TreeNode(2));
