@@ -47,4 +47,8 @@ public class Printer {
     public static void prettyPrint(final int[] values) {
         new ArrayPrinter(values).print();
     }
+
+    public static void prettyPrint(final int[][] values) {
+        new ArrayPrinter(values).print();
+    }
 }

@@ -54,7 +54,7 @@ public class TreeNodeVerticalPrinter implements PrinterType {
                     next.add(null);
                     next.add(null);
                 } else {
-                    String aa = String.valueOf(n.value);
+                    String aa = String.valueOf(n.val);
                     line.add(aa);
                     if (aa.length() > widest) widest = aa.length();
 
